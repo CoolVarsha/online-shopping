@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.backendshopping.dao.ProductDAO;
-import com.backendshopping.dto.Product;
+import com.shoppingbackend.dao.ProductDAO;
+import com.shoppingbackend.model.Product;
 
 
 @Controller
@@ -36,13 +36,13 @@ public class JsonDataController {
 				
 	}
 	
-	@RequestMapping("/category/{id}/products")
+	/*@RequestMapping("/category/{id}/products")
 	@ResponseBody
 	public List<Product> getProductsByCategory(@PathVariable int id) {
 		
 		return productDAO.listActiveProductsByCategory(id);
 				
-	}
+	}*/
 	
 	
 	@RequestMapping("/mv/products")
@@ -55,10 +55,9 @@ public class JsonDataController {
 	@ResponseBody
 	public List<Product> getMostPurchasedProducts() {		
 		return productDAO.getProductsByParam("purchases", 5);				
-
 	}
+	
+	
+	
+	
 }
-	
-	
-	
-	

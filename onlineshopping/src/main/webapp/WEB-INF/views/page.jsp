@@ -59,7 +59,7 @@
 	<div class="wrapper">
 
 		<!-- Navigation -->
-		<%@include file="./shared/navbar.jsp"%>
+		<%@include file="./templates/header.jsp"%>
 
 		<!-- Page Content -->
 
@@ -105,7 +105,7 @@
 
 
 		<!-- Footer comes here -->
-		<%@include file="./shared/footer.jsp"%>
+		<%@include file="./templates/footer.jsp"%>
 
 		<!-- jQuery -->
 		<script src="${js}/jquery.js"></script>

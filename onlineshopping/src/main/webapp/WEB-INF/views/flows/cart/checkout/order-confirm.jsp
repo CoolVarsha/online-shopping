@@ -22,6 +22,7 @@
 <title>Online Shopping - Membership</title>
 
 <script>
+
 	window.contextRoot = '${contextRoot}'
 	
 </script>

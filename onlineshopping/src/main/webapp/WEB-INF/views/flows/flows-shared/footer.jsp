@@ -1,8 +1,8 @@
-
+		</div>
 
 
 		<!-- Footer comes here -->
-		<%@include file="../../shared/footer.jsp"%>
+		<%@include file="../../templates/footer.jsp"%>
 
 		<!-- jQuery -->
 		<script src="${js}/jquery.js"></script>

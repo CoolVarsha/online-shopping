@@ -118,7 +118,7 @@
        </div>
        <div class="panel-footer">
        	<div class="text-right">
-       		New User - <a href="${contextRoot}/register">Register Here</a>
+       		New User - <a href="${contextRoot}/membership">Register Here</a>
        	</div>
        </div>
       
@@ -135,7 +135,7 @@
 
 
 		<!-- Footer comes here -->
-		<%@include file="./shared/footer.jsp"%>
+		<%@include file="./templates/footer.jsp"%>
 
 		<!-- jQuery -->
 		<script src="${js}/jquery.js"></script>

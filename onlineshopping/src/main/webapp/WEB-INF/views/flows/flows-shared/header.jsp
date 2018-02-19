@@ -18,19 +18,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="author" content="">
-
+<link rel="icon" href="${images}/fevicon.png">
 <title>Online Shopping - Membership</title>
 
 <script>
+
 	window.contextRoot = '${contextRoot}'
 	
 </script>
-
-<!-- Bootstrap Core CSS -->
+<!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
+<!--Pulling Awesome Font -->
+<link
+	href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+	rel="stylesheet">
 
-<!-- Bootstrap Readable Theme -->
-<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
 
 <!-- Bootstrap DataTables -->
@@ -50,6 +52,7 @@
 </head>
 
 <body>
+	<%@include file="/WEB-INF/views/templates/header.jsp" %>
 	<div class="se-pre-con"></div>
 	<div class="wrapper">
 

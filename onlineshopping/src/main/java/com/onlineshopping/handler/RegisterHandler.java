@@ -1,17 +1,18 @@
 package com.onlineshopping.handler;
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.binding.message.MessageBuilder;
 import org.springframework.binding.message.MessageContext;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import com.backendshopping.dao.UserDAO;
-import com.backendshopping.dto.Address;
-import com.backendshopping.dto.Cart;
-import com.backendshopping.dto.User;
-import com.onlineshopping.Model.RegisterModel;
-
+import com.onlineshopping.model.RegisterModel;
+import com.shoppingbackend.dao.UserDAO;
+import com.shoppingbackend.model.Address;
+import com.shoppingbackend.model.Cart;
+import com.shoppingbackend.model.User;
 
 @Component
 public class RegisterHandler {
@@ -60,7 +61,6 @@ public class RegisterHandler {
    
   // encode the password
   user.setPassword(passwordEncoder.encode(user.getPassword()));
-  
   // save the user
   userDAO.add(user);
   // save the billing address

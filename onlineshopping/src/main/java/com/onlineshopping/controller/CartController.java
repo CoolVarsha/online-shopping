@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.onlineshopping.Service.CartService;
-
+import com.onlineshopping.service.CartService;
 
 @Controller
 @RequestMapping("/cart")

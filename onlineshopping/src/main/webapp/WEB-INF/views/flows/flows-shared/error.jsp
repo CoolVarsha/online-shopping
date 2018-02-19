@@ -84,7 +84,7 @@
 		</div>
 
 		
-		<%@include file="../../shared/footer.jsp" %>
+		<%@include file="../../templates/footer.jsp" %>
 
 	</div>
 		

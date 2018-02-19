@@ -11,18 +11,19 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.backendshopping.dao.CartLineDAO;
-import com.backendshopping.dao.ProductDAO;
-import com.backendshopping.dao.UserDAO;
-import com.backendshopping.dto.Address;
-import com.backendshopping.dto.Cart;
-import com.backendshopping.dto.CartLine;
-import com.backendshopping.dto.OrderDetail;
-import com.backendshopping.dto.OrderItem;
-import com.backendshopping.dto.Product;
-import com.backendshopping.dto.User;
-import com.onlineshopping.Model.CheckoutModel;
-import com.onlineshopping.Model.UserModel;
+import com.onlineshopping.model.CheckoutModel;
+import com.onlineshopping.model.UserModel;
+import com.shoppingbackend.dao.CartLineDAO;
+import com.shoppingbackend.dao.ProductDAO;
+import com.shoppingbackend.dao.UserDAO;
+import com.shoppingbackend.model.Address;
+import com.shoppingbackend.model.Cart;
+import com.shoppingbackend.model.CartLine;
+import com.shoppingbackend.model.OrderDetail;
+import com.shoppingbackend.model.OrderItem;
+import com.shoppingbackend.model.Product;
+import com.shoppingbackend.model.User;
+
 
 
 @Component
@@ -206,3 +207,6 @@ public class CheckoutHandler {
 	
 	
 }
+
+
+

@@ -2,6 +2,7 @@ package com.onlineshopping.controller;
 
 import java.util.List;
 
+import javax.print.attribute.standard.PDLOverrideSupported;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
@@ -19,13 +20,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.backendshopping.dao.CategoryDAO;
-import com.backendshopping.dao.ProductDAO;
-import com.backendshopping.dto.Category;
-import com.backendshopping.dto.Product;
-import com.onlineshopping.Validator.ProductValidator;
 import com.onlineshopping.util.FileUtil;
-
+import com.onlineshopping.validator.ProductValidator;
+import com.shoppingbackend.dao.CategoryDAO;
+import com.shoppingbackend.dao.ProductDAO;
+import com.shoppingbackend.model.Category;
+import com.shoppingbackend.model.Product;
 
 
 
@@ -66,6 +66,23 @@ public class ManagementController {
 				mv.addObject("message", "Category submitted successfully!");
 			}
 		}
+			
+		return mv;
+		
+	}
+	
+
+
+	@RequestMapping("/{id}/product/delete")
+	public ModelAndView manageProductDelete(@PathVariable int id) {		
+
+		ModelAndView mv = new ModelAndView("page");	
+		mv.addObject("title","Product Management");		
+		mv.addObject("userClickManageProduct",true);
+		
+		Product nProduct = new Product();		
+		productDAO.delete(productDAO.get(id));
+		mv.addObject("product", nProduct);
 			
 		return mv;
 		
@@ -119,11 +136,12 @@ public class ManagementController {
 	
 		 //upload the file
 		 if(!mProduct.getFile().getOriginalFilename().equals("") ){
-			FileUtil.uploadFile(request, mProduct.getFile(), mProduct.getCode());
+			FileUtil.uploadFile(request, mProduct.getFile(), mProduct.getCode()); 
 		 }
 		
 		return "redirect:/manage/product?success=product";
 	}
+	
 
 	
 	@RequestMapping(value = "/product/{id}/activation", method=RequestMethod.GET)
@@ -142,7 +160,7 @@ public class ManagementController {
 		categoryDAO.add(mCategory);		
 		return "redirect:" + request.getHeader("Referer") + "?success=category";
 	}
-			
+		
 	
 	
 	@ModelAttribute("categories") 
@@ -157,3 +175,5 @@ public class ManagementController {
 	
 	
 }
+
+	

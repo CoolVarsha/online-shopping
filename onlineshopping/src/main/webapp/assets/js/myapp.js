@@ -51,7 +51,7 @@ $(function() {
 
 	// execute the below code only where we have this table
 	if ($table.length) {
-		// console.log('Inside the table!');
+		console.log('Inside the table!');
 
 		var jsonUrl = '';
 		if (window.categoryId == '') {
@@ -138,6 +138,8 @@ $(function() {
 											+ '/manage/'
 											+ data
 											+ '/product" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></a>';
+										
+										
 									}
 									
 									return str;
@@ -228,6 +230,11 @@ $(function() {
 												+ '/manage/'
 												+ data
 												+ '/product" class="btn btn-primary"><span class="glyphicon glyphicon-pencil"></span></a> &#160;';
+										str += '<a href="'
+											+ window.contextRoot
+											+ '/manage/'
+											+ data
+											+ '/product/delete" class="btn btn-danger"><span class="glyphicon glyphicon-remove-circle"></span></a>';
 
 										return str;
 									}

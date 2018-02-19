@@ -1,5 +1,8 @@
 package com.onlineshopping.controller;
 
+
+
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -15,12 +18,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.backendshopping.dao.CategoryDAO;
-import com.backendshopping.dao.ProductDAO;
-import com.backendshopping.dto.Category;
-import com.backendshopping.dto.Product;
 import com.onlineshopping.exception.ProductNotFoundException;
-
+import com.shoppingbackend.dao.CategoryDAO;
+import com.shoppingbackend.dao.ProductDAO;
+import com.shoppingbackend.model.Category;
+import com.shoppingbackend.model.Product;
 
 @Controller
 public class PageController {
@@ -32,6 +34,9 @@ public class PageController {
 	
 	@Autowired
 	private ProductDAO productDAO;
+	
+	
+	
 	
 	@RequestMapping(value = {"/", "/home", "/index"})
 	public ModelAndView index(@RequestParam(name="logout",required=false)String logout) {		
@@ -99,7 +104,7 @@ public class PageController {
 		
 		//passing the list of categories
 		mv.addObject("categories", categoryDAO.list());
-		
+		mv.addObject("productList",productDAO.listActiveProductsByCategory(id));
 		// passing the single category object
 		mv.addObject("category", category);
 		
