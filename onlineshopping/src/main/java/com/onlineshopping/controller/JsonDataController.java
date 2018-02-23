@@ -36,13 +36,13 @@ public class JsonDataController {
 				
 	}
 	
-	/*@RequestMapping("/category/{id}/products")
+	@RequestMapping("/category/{id}/products")
 	@ResponseBody
 	public List<Product> getProductsByCategory(@PathVariable int id) {
 		
 		return productDAO.listActiveProductsByCategory(id);
 				
-	}*/
+	}
 	
 	
 	@RequestMapping("/mv/products")
