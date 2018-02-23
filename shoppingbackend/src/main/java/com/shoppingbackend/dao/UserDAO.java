@@ -2,9 +2,8 @@ package com.shoppingbackend.dao;
 
 import java.util.List;
 
-import com.shoppingbackend.dto.Address;
-import com.shoppingbackend.dto.User;
-
+import com.shoppingbackend.model.Address;
+import com.shoppingbackend.model.User;
 
 public interface UserDAO {
 

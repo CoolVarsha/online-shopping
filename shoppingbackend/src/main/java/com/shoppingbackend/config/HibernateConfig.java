@@ -1,5 +1,6 @@
 package com.shoppingbackend.config;
 
+
 import java.util.Properties;
 
 import javax.sql.DataSource;
@@ -9,13 +10,13 @@ import org.hibernate.SessionFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-
+import org.springframework.core.annotation.Order;
 import org.springframework.orm.hibernate5.HibernateTransactionManager;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@ComponentScan(basePackages={"com.shoppingbackend.dto"})
+@ComponentScan(basePackages={"com.shoppingbackend.model"})
 @EnableTransactionManagement
 public class HibernateConfig {
 
@@ -51,7 +52,7 @@ public class HibernateConfig {
 		LocalSessionFactoryBuilder builder = new LocalSessionFactoryBuilder(dataSource);
 		
 		builder.addProperties(getHibernateProperties());
-		builder.scanPackages("com.shoppingbackend.dto");
+		builder.scanPackages("com.shoppingbackend.model");
 		
 		return builder.buildSessionFactory();
 		
@@ -69,7 +70,7 @@ public class HibernateConfig {
 		properties.put("hibernate.show_sql", "true");
 		properties.put("hibernate.format_sql", "true");
 		
-		properties.put("hibernate.hbm2ddl.auto", "create");
+		properties.put("hibernate.hbm2ddl.auto", "update");
 		
 		
 		return properties;

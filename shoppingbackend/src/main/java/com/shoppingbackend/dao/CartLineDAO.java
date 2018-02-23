@@ -1,11 +1,10 @@
 package com.shoppingbackend.dao;
 
-
 import java.util.List;
 
-import com.shoppingbackend.dto.Cart;
-import com.shoppingbackend.dto.CartLine;
-import com.shoppingbackend.dto.OrderDetail;
+import com.shoppingbackend.model.Cart;
+import com.shoppingbackend.model.CartLine;
+import com.shoppingbackend.model.OrderDetail;
 
 
 public interface CartLineDAO {

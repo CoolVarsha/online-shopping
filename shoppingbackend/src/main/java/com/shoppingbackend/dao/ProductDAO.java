@@ -1,9 +1,8 @@
 package com.shoppingbackend.dao;
 
-
 import java.util.List;
 
-import com.shoppingbackend.dto.Product;
+import com.shoppingbackend.model.Product;
 
 
 public interface ProductDAO {

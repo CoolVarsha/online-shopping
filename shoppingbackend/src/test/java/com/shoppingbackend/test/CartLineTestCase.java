@@ -1,20 +1,12 @@
 package com.shoppingbackend.test;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.BeforeClass;
-import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.shoppingbackend.dao.CartLineDAO;
 import com.shoppingbackend.dao.ProductDAO;
 import com.shoppingbackend.dao.UserDAO;
-import com.shoppingbackend.dto.Cart;
-import com.shoppingbackend.dto.CartLine;
-import com.shoppingbackend.dto.Product;
-import com.shoppingbackend.dto.User;
-
-
+import com.shoppingbackend.model.CartLine;
 
 public class CartLineTestCase {
 
@@ -41,7 +33,7 @@ public class CartLineTestCase {
 		userDAO = (UserDAO)context.getBean("userDAO");
 	}
 	
-	
+/*	
 	@Test
 	public void testAddCartLine() {
 		
@@ -66,13 +58,13 @@ public class CartLineTestCase {
 		cart.setGrandTotal(cart.getGrandTotal() + (cartLine.getTotal() - oldTotal));
 		
 		assertEquals("Failed to add the CartLine!",true, cartLineDAO.add(cartLine));
-		assertEquals("Failed to update the cart!",true, cartLineDAO.updateCart(cart));
+		assertEquals("Failed to update the cart!",true, userDAO.updateCart(cart));
 		
 	}
 	
+	*/
 	
-	/*
-	@Test
+	/*@Test
 	public void testUpdateCartLine() {
 
 		// fetch the user and then cart of that user
@@ -92,8 +84,8 @@ public class CartLineTestCase {
 		assertEquals("Failed to update the CartLine!",true, cartLineDAO.update(cartLine));	
 
 		
-	}
-	*/
+	}*/
+	
 	
 	
 }

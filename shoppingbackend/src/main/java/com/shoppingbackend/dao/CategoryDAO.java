@@ -2,8 +2,7 @@ package com.shoppingbackend.dao;
 
 import java.util.List;
 
-import com.shoppingbackend.dto.Category;
-
+import com.shoppingbackend.model.Category;
 
 public interface CategoryDAO {
 
